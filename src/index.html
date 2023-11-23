@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Chat GTP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+    <nav class="mobile-navbar">
+        <button id="open-menu" class="menu-button">
+            <i class="menu-icon"></i>
+        </button>
+    </nav>
+    <div class="layout">
+        <aside class="side-menu-wrapper">
+            <div class="side-menu">
+                <button id="close-menu-button" class="side-menu-item block outlined">
+                    <i class="close-icon"></i> Close
+                </button>
+
+                <button id="create-chat" class="side-menu-item block outlined"><i class="plus-icon"></i>New
+                    Chat</button>
+
+                <ul id="chat-list" class="chat-list"></ul>
+
+                <hr class="divider" />
+
+                <ul class="setting-block">
+                    <li>
+                        <button id="delete-all-chats" class="side-menu-item"><i class="delete-icon"></i>
+                            Clear Conversations</button>
+                    </li>
+                    <li>
+                        <button disabled class="side-menu-item disabled"><i class="contrast-icon"></i> Light
+                            mode</button>
+                    </li>
+                    <li>
+                        <button disabled class="side-menu-item disabled"><i class="discord-icon"></i> Discord</button>
+                    </li>
+                    <li>
+                        <button disabled class="side-menu-item disabled"><i class="enlarge-icon"></i> Updates &
+                            FAQ</button>
+                    </li>
+                    <li>
+                        <button disabled class="side-menu-item disabled"><i class="logout-icon"></i> Log out</button>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="chat-wrapper">
+            <ul class="chat" id="active-chat"></ul>
+
+            <div class="new-message-block">
+                <div class="message-field">
+                    <input id="new-message" rows="4" onp autofocus placeholder="Message ChatGPT..."></input>
+                    <button id="submit-message"><i class="send-icon"></i></button>
+                </div>
+                <div class="note">ChatGPT can make mistakes. Consider checking important information.</div>
+            </div>
+        </main>
+    </div>
+
+    <script src="src/app.cjs" type="module"></script>
+</body>
+
+</html>
